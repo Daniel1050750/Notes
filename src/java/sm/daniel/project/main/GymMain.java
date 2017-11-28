@@ -3,7 +3,7 @@ package sm.daniel.project.main;
 import java.sql.SQLException;
 import java.util.Collection;
 
-import sm.daniel.project.connection.ConnectionFactory;
+import sm.daniel.project.ws.ConnectionFactory;
 import sm.daniel.project.dao.ExerciseDAO;
 import sm.daniel.project.dao.FactoryGym;
 import sm.daniel.project.dao.jcabi.Exercises;

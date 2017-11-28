@@ -7,7 +7,7 @@ import java.sql.*;
 import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.Response;
 
-import sm.daniel.project.connection.ConnectionFactory;
+import sm.daniel.project.ws.ConnectionFactory;
 import sm.daniel.project.dao.MuscleGroupDAO;
 import sm.daniel.project.model.Exercise;
 import sm.daniel.project.model.MuscleGroup;

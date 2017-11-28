@@ -10,7 +10,7 @@ import com.jcabi.jdbc.JdbcSession;
 import com.jcabi.jdbc.ListOutcome;
 import com.jcabi.jdbc.Outcome;
 
-import sm.daniel.project.connection.ConnectionFactory;
+import sm.daniel.project.ws.ConnectionFactory;
 import sm.daniel.project.dao.ExerciseDAO;
 import sm.daniel.project.model.Exercise;
 import sm.daniel.project.model.MuscleGroup;

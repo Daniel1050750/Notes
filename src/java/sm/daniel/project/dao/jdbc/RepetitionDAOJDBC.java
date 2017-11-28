@@ -8,7 +8,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-import sm.daniel.project.connection.ConnectionFactory;
+import sm.daniel.project.ws.ConnectionFactory;
 import sm.daniel.project.dao.RepetitionDAO;
 import sm.daniel.project.model.Exercise;
 import sm.daniel.project.model.MuscleGroup;

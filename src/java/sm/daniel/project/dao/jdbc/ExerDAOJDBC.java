@@ -11,7 +11,7 @@ import java.util.List;
 import javax.annotation.Resource;
 import javax.sql.DataSource;
 
-import sm.daniel.project.connection.ConnectionFactory;
+import sm.daniel.project.ws.ConnectionFactory;
 import sm.daniel.project.dao.ExerFactory;
 import sm.daniel.project.model.Exercise;
 import sm.daniel.project.model.MuscleGroup;

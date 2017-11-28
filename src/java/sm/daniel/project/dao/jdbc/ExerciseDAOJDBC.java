@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-import sm.daniel.project.connection.ConnectionFactory;
+import sm.daniel.project.ws.ConnectionFactory;
 import sm.daniel.project.constants.Database;
 import sm.daniel.project.dao.ExerciseDAO;
 import sm.daniel.project.model.Exercise;

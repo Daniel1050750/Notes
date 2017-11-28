@@ -3,11 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Daniel/My%20Documentss/NetBeansProjects/SMProject/src/java/sm/daniel/project/service/Secured.java</file>
-            <file>file:/C:/Users/Daniel/My%20Documentss/NetBeansProjects/SMProject/src/java/sm/daniel/project/service/ExerciseService.java</file>
-            <file>file:/C:/Users/Daniel/My%20Documentss/NetBeansProjects/SMProject/src/java/sm/daniel/project/service/AuthenticationFilter.java</file>
-            <file>file:/C:/Users/Daniel/My%20Documentss/NetBeansProjects/SMProject/src/java/sm/daniel/project/service/GymloggerRestApplication.java</file>
-            <file>file:/C:/Users/Daniel/My%20Documentss/NetBeansProjects/SMProject/src/java/sm/daniel/project/restlet/GymRestletApi.java</file>
+            <file>file:/C:/Users/Daniel/My%20Documentss/NetBeansProjects/SMProject/src/java/sm/daniel/project/ws/Notes.java</file>
+            <file>file:/C:/Users/Daniel/My%20Documentss/NetBeansProjects/SMProject/src/java/sm/daniel/project/service/TestService.java</file>
+            <file>file:/C:/Users/Daniel/My%20Documentss/NetBeansProjects/SMProject/src/java/sm/daniel/project/main/GymMain.java</file>
         </group>
     </open-files>
 </project-private>

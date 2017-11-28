@@ -1,7 +1,6 @@
 package sm.daniel.project.ws;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -11,7 +10,7 @@ import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
 
-public class ConnectionFactory {
+public class DataBaseConnection {
 	
     public static final String CONTEXT_STRING = "java:/comp/env";
     public static final String DATASOURCE_STRING = "jdbc/notesapp";
@@ -20,10 +19,10 @@ public class ConnectionFactory {
     public static final String DATABASE = "notesapp";
     public static final String USER = "root";
     public static final String PASS = "";
-    private static ConnectionFactory instance = null;
+    private static DataBaseConnection instance = null;
     private static DataSource src;
 
-    private ConnectionFactory() {
+    private DataBaseConnection() {
         try {
             Context ctx = new InitialContext();
             src = (DataSource)ctx.lookup(DATASOURCE_NAME);
@@ -34,28 +33,28 @@ public class ConnectionFactory {
         }
     }
 
-    public static ConnectionFactory getInstance() {
-        if ( ConnectionFactory.instance == null ) { 
-            ConnectionFactory.instance = new ConnectionFactory(); 
+    public static DataBaseConnection getInstance() {
+        if ( DataBaseConnection.instance == null ) { 
+            DataBaseConnection.instance = new DataBaseConnection(); 
         }
-        return ConnectionFactory.instance;
+        return DataBaseConnection.instance;
     }
 
     public static Connection getConnection() throws SQLException {
         Connection conn = null; 
         if ( instance == null ) { 
-            instance = new ConnectionFactory(); 
+            instance = new DataBaseConnection(); 
         }
         try {
             if ( src == null ) {
-                MysqlDataSource mysqlDataSource = new MysqlDataSource();
+                /*MysqlDataSource mysqlDataSource = new MysqlDataSource();
                 mysqlDataSource.setUser(USER);
                 mysqlDataSource.setPassword(PASS);
                 mysqlDataSource.setServerName("localhost");
                 mysqlDataSource.setDatabaseName(DATABASE);
                 src = mysqlDataSource;
 
-                conn = DriverManager.getConnection(DB_URL + DATABASE, USER, PASS);
+                conn = DriverManager.getConnection(DB_URL + DATABASE, USER, PASS);*/
             }
             else {
                 conn = src.getConnection();
@@ -67,8 +66,8 @@ public class ConnectionFactory {
     }
 
     public static DataSource getDataSource() {
-        if ( ConnectionFactory.instance == null ) { 
-            ConnectionFactory.instance = new ConnectionFactory(); 
+        if ( DataBaseConnection.instance == null ) { 
+            DataBaseConnection.instance = new DataBaseConnection(); 
         }
         return src;
     }

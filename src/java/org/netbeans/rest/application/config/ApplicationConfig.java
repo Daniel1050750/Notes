@@ -29,12 +29,7 @@ public class ApplicationConfig extends Application {
      * If required, comment out calling this method in getClasses().
      */
     private void addRestResourceClasses(Set<Class<?>> resources) {
-        resources.add(sm.daniel.project.service.AuthenticationService.class);
-        resources.add(sm.daniel.project.service.ExerciseService.class);
-        resources.add(sm.daniel.project.service.MuscleGroupService.class);
-        resources.add(sm.daniel.project.service.TestService.class);
-        resources.add(sm.daniel.project.service.WorkoutService.class);
-        resources.add(sm.daniel.project.ws.Notes.class);
+        resources.add(sm.daniel.project.ws.NotesMain.class);
     }
     
 }

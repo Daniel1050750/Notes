@@ -1,65 +1,49 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package sm.daniel.project.ws;
 
-import javax.ws.rs.Consumes;
-import javax.ws.rs.DELETE;
-import javax.ws.rs.GET;
-import javax.ws.rs.POST;
-import javax.ws.rs.PUT;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.Produces;
-import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 
-/**
- *
- * @author Daniel
- */
-@Path("/notes")
-public class Notes {
-    
-    @GET
-    @Path("/user/{id}")
-    @Consumes(MediaType.APPLICATION_JSON)
-    @Produces(MediaType.APPLICATION_JSON)
-    public Response findUserById(@PathParam("id") int id) {
-        //return Response.status(200).entity(exerciseDAO.getExercicesByMuscleGroupId(id)).build();
-        return null;
-    }
+import javax.xml.bind.annotation.XmlRootElement;
 
-    @POST
-    @Consumes(MediaType.APPLICATION_JSON)
-    @Produces(MediaType.APPLICATION_JSON)
-    public Response addUser() throws Exception {
-        return null;
-        
-    }
-    
-    @POST
-    @Consumes(MediaType.APPLICATION_JSON)
-    @Produces(MediaType.APPLICATION_JSON)
-    public Response addNote() throws Exception {
-        return null;
-    }
-    
-    @PUT
-    @Consumes(MediaType.APPLICATION_JSON)
-    @Produces(MediaType.APPLICATION_JSON)
-    public Response editNote() throws Exception {        
-        return null;
-    }
-    
-    
-    @DELETE
-    @Path("/note/{id}")
-    @Consumes(MediaType.APPLICATION_JSON)
-    @Produces(MediaType.APPLICATION_JSON)
-    public Response deleteNote() throws Exception {
-        return null;
-    }
+@XmlRootElement
+public class Notes implements Serializable {
+	
+	private static final long serialVersionUID = 1L;
+	public static final String ID = "id";
+	public static final String ID_MUSCLEGROUP = "id_musclegroup";
+	public static final String NAME = "name";
+	public static final String NOME = "nome";
+	private int id;
+	private String name;
+	private String nome;
+	private MuscleGroup muscleGroup;
+	private List<Repetition> repetitions;
+	
+	public Notes() {
+		this.repetitions = new ArrayList<Repetition>();
+	}
+
+	public void setId(int id) { this.id = id; }
+	public int getId() { return this.id; }
+	public void setName(String name) { this.name = name; }
+	public String getName() { return this.name; }
+	public void setNome(String nome) { this.nome = nome; }
+	public String getNome() { return this.nome; }
+
+	public List<Repetition> getRepetitions() { return repetitions; }
+	public void setRepetitions(List<Repetition> repetitions) { this.repetitions = repetitions; }
+
+	public MuscleGroup getMuscleGroup() { return muscleGroup; }
+	public void setMuscleGroup(MuscleGroup muscleGroup) { this.muscleGroup = muscleGroup; }
+
+	@Override
+	public String toString() {
+		return "Exercise [id=" + id + ", name=" + name + ", nome=" + nome
+				+ ", muscleGroup=" + muscleGroup + ", repetitions="
+				+ repetitions + "]";
+	}
+	
+	
 }

@@ -1,4 +1,4 @@
-package sm.daniel.project.constants;
+package sm.daniel.project.ws;
 
 
 import sm.daniel.project.model.Exercise;

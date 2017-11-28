@@ -5,16 +5,14 @@
  */
 package sm.daniel.project.ws;
 
-import java.util.Collection;
-
 /**
  *
  * @author Daniel
  */
-public class Notes {
-	
-    String title;
-    String content;
-    int level;
-    Collection<Users> sharenoteusers;
+public class Users {
+    String fname;
+    String lname;
+    String email;
+    String password;
+    String img;
 }

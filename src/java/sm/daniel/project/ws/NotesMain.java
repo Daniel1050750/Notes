@@ -23,6 +23,8 @@ import javax.ws.rs.core.Response;
 @Path("/notes")
 public class NotesMain {
     
+    private Users User;
+    
     @GET
     @Path("/user/{username}/{password}")
     @Consumes(MediaType.APPLICATION_JSON)
@@ -33,11 +35,11 @@ public class NotesMain {
     }
 
     @POST
+    @Path("/adduser/{fname}/{lname}/{username}/{password}/{email}/{img}")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Response addUser() throws Exception {
-        return Response.status(200).entity("teste").build();
-        //return null;        
+    public Response addUser(@PathParam("fname") String fname, @PathParam("lname") String lname, @PathParam("username") String username, @PathParam("password") String password, @PathParam("email") String email, @PathParam("img") String img) throws Exception {
+        return Response.status(200).entity(User.addUser(fname, lname, username, password, email, img)).build();
     }
     
     @POST

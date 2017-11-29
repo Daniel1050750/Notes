@@ -12,7 +12,12 @@ package sm.daniel.project.ws;
 public class Users {
     String fname;
     String lname;
+    String username;
     String email;
     String password;
     String img;
+
+    Object addUser(String fname, String lname, String username, String password, String email, String img) {
+        return "teste";
+    }
 }
